@@ -55,7 +55,7 @@ namespace DNSPod.Service
             {
                 WebClient MyWebClient = new WebClient();
                 MyWebClient.Credentials = CredentialCache.DefaultCredentials;
-                string url = "http://members.3322.org/dyndns/getip";//获取公开IP地址
+                string url = "http://members.3322.org/dyndns/getip";//获取公开IP地址 
                 Byte[] pageData = MyWebClient.DownloadData(url);
                 string pageHtml = Encoding.UTF8.GetString(pageData).Replace("\n", "");//去除换行符
 
@@ -128,7 +128,7 @@ namespace DNSPod.Service
                 {
                     throw new Exception("间隔时间太短，必须大于等于5，建议为10");
                 }
-                Time = Time * 6000;
+                Time = Time * 60000;
                 login.id = node.SelectSingleNode("LoginDNSPod/id").InnerText;
                 login.token = node.SelectSingleNode("LoginDNSPod/token").InnerText;
 
