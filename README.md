@@ -18,7 +18,7 @@
 
 - 登陆信息
 
-  - token 申请地址 <a href=https://www.dnspod.cn/console/user/security>https://www.dnspod.cn/console/user/security</a>
+  - token 申请地址 <a href=https://www.dnspod.cn/console/user/security>https://console.dnspod.cn/account/token</a>
 
   ~~~ xml
    <LoginDNSPod>
@@ -29,7 +29,7 @@
 
 - 记录值（可多条，多个域名指向本机ip）
 
-  - sub_domain，主机记录
+  - sub_domain，主机记录 留空解析@
   - domain，域名
 
   ~~~xml
